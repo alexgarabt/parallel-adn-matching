@@ -1,0 +1,5 @@
+align_omp
+align_seq
+align_mpi
+align_cuda
+*.o
