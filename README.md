@@ -1,10 +1,10 @@
 # Alineamiento de secuencias de ADN
 Se suministra a los alumnos un código secuencial (ver apéndices al final de la página) que utiliza un método de fuerza bruta para detectar alineamientos (coincidencias) exactas de una serie de patrones en una cadena genética más larga.
 
-Ejemplo:
-Secuencia original: CCGTACCTGTGACCGTTAAAACTTTC
-Patrón: ACCGT
-Alinea en posición 11 (la primera posición es la 0)
+Ejemplo:  
+Secuencia original: CCGTACCTGTGACCGTTAAAACTTTC  
+Patrón: ACCGT  
+Alinea en posición 11 (la primera posición es la 0)  
 
 El programa simula una situación real generando según los argumentos suministrados una secuencia aleatoria, y una serie de patrones que pueden ser o completamente aleatorios (puede que se encuentren o no) o muestras escogidas aleatoriamente de la secuencia original (siempre se acabarán encontrando).
 
@@ -46,10 +46,11 @@ El objetivo es paralelizar y optimizar el código sin modificar el algoritmo que
 El programa muestra el tiempo de ejecución de la parte de computo (sin la inicialización), y los checksums que se utilizan para verificar la corrección de la simulación.
 
 ## Paralelizacion y Optimizacion
-Parte del programa que se ha paralelizado es la indicada  "START HERE:"  Claramente indicado en los comentarios de cada programa
-La idea del algoritmo es resolver mediante el uso de fuerza bruta. Ese concepto no es alterado en ninguna de las versiones paralelizadas.
+Parte del programa que se ha paralelizado es la indicada  "START HERE:"  Claramente indicado en los comentarios de cada programa.  
+La idea del algoritmo es resolver mediante el uso de fuerza bruta. Ese concepto no es alterado en ninguna de las versiones paralelizadas.  
 
-Tipos de paralelizacion usada:
+Tipos de paralelizacion usada:  
+
     * Sequencial (align_seq) => Version secuencial del algoritmo de fuerza bruta
     * OpenMP (Open MultiProcessing) API (align_omp.c) => Simple paralelizacion de bucles y creacion the threads para resolver las tareas mas pesadas
     * MPI (Message Passing Interface) standard (align_mpi) => Uso de diferentes procesos en diferentes maquinas para paralelizar tareas pesadas computacionalmente mediante el paso de mensajes entre procesos. Resolucion mediante patron Master-Slave un procesos se encarga de mandar a los demas las tareas y unifica los resultados.
